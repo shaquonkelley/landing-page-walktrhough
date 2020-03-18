@@ -1,0 +1,82 @@
+/* fonts */
+@font-face{
+    font-family: "Futura Book";
+    src: url("assets/fonts/futura-book.ttf");
+}
+
+/* base */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    font-family: "Futura Book";
+}
+img{
+    width: 100%;
+}
+
+/* layout */
+.feature_section{
+    margin-top: 2em;
+}
+
+
+/* blocks */
+
+/* header section */
+.header__logo_container{
+    width: 5em;
+
+}
+
+.header__nav__ul {
+    display: flex;
+    
+}
+
+.header__nav__ul a{
+    font-size: .5em;
+    text-decoration: none;
+    padding: 1em;
+}
+
+.header__card{
+    border: 1px solid #333;
+    width: 85%;
+    height: 8em;
+}
+
+.header__card__text{
+    font-size: .5em;
+}
+/* feature section */
+
+.feature_section__card{
+    border: 1px solid lightgray;
+    width: 12em;
+    margin-top: 5px;
+}
+
+.card__img__container{
+    display: inline-block;
+    width: 5%;
+}
+
+/* product section */
+.product_section__img_container {
+    width: 4em;
+    margin-top: .5em;
+}
+
+/* footer section */
+.footer{
+    margin-top: 10px;
+}
