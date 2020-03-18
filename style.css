@@ -4,11 +4,17 @@
     src: url("assets/fonts/futura-book.ttf");
 }
 
-/* base */
+@font-face{
+    font-family: "Futura Heavy";
+    src: url("assets/fonts/futura-heavy.ttf");
+}
+
+/* base -------------------------------> */ 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Futura Book";
 }
 
 li {
@@ -19,45 +25,152 @@ a {
     text-decoration: none;
     font-family: "Futura Book";
 }
+
 img{
     width: 100%;
 }
 
-/* layout */
+input {
+    border:none;
+    background-image:none;
+    background-color:transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+/* layout ----------------------------> */
+.page_container{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1.5fr 1fr 1.5fr;
+}
+
 .feature_section{
     margin-top: 2em;
 }
 
+.header{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
 
-/* blocks */
+.footer{
+    margin-top: 10px;
+}
 
-/* header section */
+
+/* blocks -------------------------------> */ 
+
+    /* header section */
 .header__logo_container{
     width: 5em;
 
 }
 
+.header__title {
+    font-family: "Futura Heavy";
+    font-size: 1em;
+    width: 10vw;
+    justify-self: start;
+
+    position: relative;
+    left:.5em;
+    margin-top: 3em;
+}
+
 .header__nav__ul {
-    display: flex;
+
     
 }
 
-.header__nav__ul a{
+.header__nav__ul{
     font-size: .5em;
     text-decoration: none;
     padding: 1em;
 }
 
+.header__nav{
+    text-align: center;
+}
+
 .header__card{
-    border: 1px solid #333;
+    max-width: 40em;
+    min-width: 340px;
+    border:1px solid rgba(93, 91, 91, 0.13);
+    border-radius: 4px;
     width: 85%;
-    height: 8em;
+    height: 9em;
+    display: grid;
+    
+    margin-top: 3.5em;
+
+    box-shadow: 0 0 20px 8px rgba(14, 13, 13, 0.109);
+
+    grid-template-areas: 
+    "n n n n n"
+    "t t t t t"
+    "i i i i b";
+}
+.name_container{
+    display: flex;
+    justify-content: start;
+    margin-top: 3%;
+
+    grid-area: n;
+}
+
+.header__card_icon{
+    padding-left: 1em;
+    font-size: .75em;
 }
 
 .header__card__text{
-    font-size: .5em;
+    text-align: left;
+    font-size: .75em;
+    margin-top: 1em;
+    width: 90%;
+    justify-self: center;
+
+    grid-area: t;
 }
-/* feature section */
+
+.header__card__input{
+grid-area: i;
+justify-self: center;
+width:80%;
+border-radius: 10px;
+background-color: rgba(233, 232, 232, 0.685);
+margin-top: .75em;
+margin-bottom: 1em;
+
+outline: none; 
+}
+
+.header__card__btn {
+    grid-area: b;
+
+    background: rgb(91,102,238);
+    background: linear-gradient(90deg, rgba(91,102,238,1) 17%, rgba(106,34,218,1) 100%);
+    width: 70%;
+
+    border-radius: 25px;
+    color:white;
+    font-size: xx-small;
+    letter-spacing: .1em;
+    justify-self: start;
+    
+    position: relative;
+    right: 2.5em;
+
+    margin-top: .75em;
+    margin-bottom: 1em;
+}
+
+    /* feature section */
 
 .feature_section__card{
     border: 1px solid lightgray;
@@ -70,13 +183,43 @@ img{
     width: 5%;
 }
 
-/* product section */
+    /* product section */
+
+.product_section{
+display: grid;
+grid-template-areas: 
+            ""
+            ""
+            ""
+            "";
+
+}
+
 .product_section__img_container {
     width: 4em;
     margin-top: .5em;
 }
+.product_img_asana{
+    grid-area: asana;
+}
 
-/* footer section */
-.footer{
-    margin-top: 10px;
+.product_img_google{
+    grid-area: google;
+}
+.product_img_jira{
+    grid-area:  
+}
+
+    /* footer section */
+
+.footer__input {
+
+}
+
+.footer__button{
+
+}
+
+.footer__nav{
+
 }
